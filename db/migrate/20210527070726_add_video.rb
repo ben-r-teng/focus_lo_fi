@@ -8,5 +8,6 @@ class AddVideo < ActiveRecord::Migration[6.1]
       t.timestamps
     end
     add_foreign_key :videos, :playlists, column: :playlist_id
+    add_index(:videos, :playlist_id)
   end
 end
