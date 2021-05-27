@@ -16,6 +16,9 @@ gem 'webpacker', '~> 5.0'
 gem 'react-rails'
 
 gem 'yt'
+
+gem 'pry', '~> 0.13.1'
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
