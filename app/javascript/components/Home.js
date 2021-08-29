@@ -23,6 +23,9 @@ function Home(){
   return (
     <div>
       Home
+      <p>
+        Is where the heart is.
+      </p>
     </div>
   )
 }

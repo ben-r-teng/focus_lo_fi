@@ -22,3 +22,19 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# DB commands
+```
+rails generate migration NameOfMigration
+rails generate migration NameOfSeed
+
+rails db:migrate
+rails db:rollback
+
+
+```
+
+# Server Commands
+```
+rails s
+```
