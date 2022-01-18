@@ -36,5 +36,13 @@ yarn-debug.log*
 .yarn-integrity
 .yarn
 
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 #Ignore my secrets
 .env
