@@ -7,6 +7,7 @@ import Home from './Home'
 // import Game from './TicTacToe/Game'
 // import NoMatch from './NoMatch'
 import { Route, Switch } from 'react-router-dom'
+import YoutubePlayer from './YoutubePlayer'
 
 // import NavBar from './NavBar/NavBar'
 // import Colors from './Constants/Colors'
@@ -25,9 +26,9 @@ class App extends React.Component {
       >
         {/* <NavBar/> */}
         <Switch>
-          <Route exact path="/" component={Home} />
-          {/* <Route exact path="/posts" component={Posts} />
-          <Route exact path="/mdg_set" component={MdgSets} />
+          <Route exact path="/" component={YoutubePlayer} />
+          <Route exact path="/home" component={Home} />
+          {/* <Route exact path="/mdg_set" component={MdgSets} />
           <Route path="/mdg_set/:id" component={MdgSetsShow} />
           <Route exact path="/tic_tac_toe" component={Game} />
           <Route path="*" component={NoMatch}/> */}
