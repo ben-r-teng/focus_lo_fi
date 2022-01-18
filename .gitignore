@@ -34,7 +34,7 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-/.yarn
+.yarn/*
 
 #Ignore my secrets
 .env
