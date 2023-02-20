@@ -1,30 +1,41 @@
+require 'pry'
+
 class Playlist < ActiveRecord::Base
   has_many :videos
 
   # Adds
   def self.upsert_playlist(id)
-    begin 
-    playlist = Yt::Playlist.new id: id
-    
-    Playlist.transaction do
-      existing = Playlist.find_or_initialize_by(id: playlist.id)
-      existing.update!(
-        title: playlist.title,
-        description: playlist.description,
-        thumbnail: playlist.thumbnail_url,
-      )      
-    end
+    # begin 
+      # binding.pry
+      playlist = Yt::Playlist.new id: id
+      # binding.pry
+      
+      Playlist.transaction do
+        # binding.pry
+        existing = Playlist.find_or_initialize_by(id: playlist.id)
+        # binding.pry
+        existing.update!(
+          title: playlist.title,
+          description: playlist.description,
+          thumbnail: playlist.thumbnail_url,
+        )      
+        # binding.pry
+      end
+      
+      # binding.pry
+      # return playlist
 
-    return playlist
-
-    rescue => e
-      puts e
-      return nil
-    end
+      # binding.pry
+      # rescue => e
+        # binding.pry
+        # puts "I've been rescued"
+        # puts e
+        # return nil
+      # end
   end
 
   def sync_videos
-    begin 
+    # begin 
       playlist = Yt::Playlist.new id: id
 
       Playlist.transaction do
@@ -33,11 +44,11 @@ class Playlist < ActiveRecord::Base
         end
       end
 
-      return true
+      # return true
 
-    rescue => e
-      puts e
-      return nil
-    end
+    # rescue => e
+    #   puts e
+    #   return nil
+    # end
   end
 end
